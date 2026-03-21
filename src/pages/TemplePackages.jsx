@@ -116,15 +116,22 @@ function KeralaTempleCalc() {
 export default function TemplePackages() {
   const location = useLocation()
   const [tab, setTab] = useState(location.state?.tab || 'india')
+  const [width, setWidth] = useState(window.innerWidth)
 
   useEffect(() => { window.scrollTo(0, 0) }, [])
+  useEffect(() => {
+    const handler = () => setWidth(window.innerWidth)
+    window.addEventListener('resize', handler)
+    return () => window.removeEventListener('resize', handler)
+  }, [])
+  const isMobile = width < 768
 
   return (
     <div className="pt-24 min-h-screen" style={{ background: 'linear-gradient(180deg,#0f0a1e 0%,#1a0a2e 50%,#0f0a1e 100%)' }}>
       {/* Hero */}
       <div
-        className="relative h-72 flex items-center justify-center"
-        style={{ backgroundImage: SHIVA_BG, backgroundSize: 'cover', backgroundPosition: 'center top' }}
+        className="relative h-72 flex items-center justify-center overflow-hidden"
+        style={{ backgroundImage: SHIVA_BG, backgroundSize: 'cover', backgroundPosition: isMobile ? 'center -100px' : 'center top' }}
       >
         <div className="text-center text-white z-10">
           <p className="text-orange-400 text-sm font-semibold tracking-widest uppercase mb-2">🕉️ Om Namah Shivaya</p>

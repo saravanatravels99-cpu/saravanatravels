@@ -41,16 +41,20 @@ export default function Home() {
       {/* Hero — Shiva bg */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image Layer */}
-        <div className="absolute inset-0">
+        <div className="absolute inset-0" style={{ background: '#0a0f1e' }}>
           <img
             src="/siva.png"
             alt="bg"
-            className="w-full h-full object-cover"
-            style={{ objectPosition: isDesktop ? '50% 0%' : 'center top' }}
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              objectPosition: 'center 30%',
+            }}
           />
-          <div className="absolute inset-0" style={{ background: isDesktop ? 'rgba(0,0,30,0.35)' : 'rgba(0,0,30,0.50)' }}></div>
+          <div className="absolute inset-0" style={{ background: 'rgba(0,0,30,0.40)' }}></div>
         </div>
-        <div className="text-center text-white px-4 max-w-4xl mx-auto relative z-10">
+        <div className="text-center text-white px-4 max-w-4xl mx-auto relative z-10 pt-24 md:pt-0">
           <p className="text-orange-300 font-medium mb-2 tracking-widest text-sm uppercase">🕉️ Welcome to Saravana Travels</p>
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
             Explore the <span className="text-orange-400">Divine Serenity</span>
