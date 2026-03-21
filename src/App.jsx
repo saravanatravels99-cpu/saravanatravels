@@ -11,6 +11,7 @@ import InternationalPackages from './pages/InternationalPackages'
 import SignatureExperiences from './pages/SignatureExperiences'
 import Contact from './pages/Contact'
 import TemplePackages from './pages/TemplePackages'
+import FloatingMenu from './components/FloatingMenu'
 
 export default function App() {
   const [introDone, setIntroDone] = useState(false)
@@ -30,6 +31,7 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <QuickBookingForm />
+        <FloatingMenu />
         <Footer />
       </BrowserRouter>
     </>

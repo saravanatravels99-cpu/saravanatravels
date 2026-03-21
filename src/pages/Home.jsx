@@ -40,20 +40,21 @@ export default function Home() {
     <div className="pt-0">
       {/* Hero — Shiva bg */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Video Layer */}
+        {/* Background Image Layer */}
         <div className="absolute inset-0" style={{ background: '#0a0f1e' }}>
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-          >
-            <source src="/hero.mp4" type="video/mp4" />
-          </video>
-          <div className="absolute inset-0" style={{ background: 'rgba(0,0,30,0.40)' }}></div>
+          <img
+            src="/siva.png"
+            alt="bg"
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              objectPosition: 'center 30%',
+            }}
+          />
+          <div className="absolute inset-0" style={{ background: 'rgba(0,0,30,0.20)' }}></div>
         </div>
-        <div className="text-center text-white px-4 max-w-4xl mx-auto relative z-10 pt-24 md:pt-0">
+        <div className="text-center text-white px-4 max-w-5xl mx-auto relative z-10 pt-24 md:pt-0">
           <p className="text-orange-300 font-medium mb-2 tracking-widest text-sm uppercase">🕉️ Welcome to Saravana Travels</p>
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
             Explore the <span className="text-orange-400">Divine Serenity</span>
@@ -61,14 +62,8 @@ export default function Home() {
           <p className="text-gray-300 text-lg mb-6 max-w-xl mx-auto">
             Discover breathtaking destinations, spiritual journeys, and unforgettable experiences crafted just for you.
           </p>
-          {/* Primary CTAs */}
+          {/* Primary CTA — only Book Now */}
           <div className="flex flex-wrap gap-3 justify-center mb-4">
-            <Link to="/temple" className="bg-orange-600 hover:bg-orange-700 text-white px-7 py-3 rounded-2xl font-bold text-base transition-all hover:scale-105 shadow-lg">
-              🛕 Temple Tours
-            </Link>
-            <Link to="/kerala" className="text-white px-7 py-3 rounded-2xl font-bold text-base transition-all hover:scale-105 shadow-lg hover:opacity-90" style={{ background: YALE_BLUE }}>
-              🌴 View Packages
-            </Link>
             <button
               onClick={() => window.open(waBooking({ message: 'I would like to book a tour package. Please help me.' }), '_blank')}
               className="bg-green-500 hover:bg-green-600 text-white px-7 py-3 rounded-2xl font-bold text-base transition-all hover:scale-105 shadow-lg"
@@ -76,7 +71,7 @@ export default function Home() {
               📲 Book Now
             </button>
           </div>
-          {/* Contact / WhatsApp / Call — all in hero */}
+          {/* Contact / WhatsApp / Call */}
           <div className="flex flex-wrap gap-3 justify-center mb-8">
             <Link to="/contact" className="bg-white/15 hover:bg-white/25 backdrop-blur text-white border border-white/30 px-5 py-2 rounded-xl font-semibold text-sm transition-all hover:scale-105">
               📩 Contact Us
@@ -91,7 +86,7 @@ export default function Home() {
               📞 9442855620
             </a>
           </div>
-          <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-300">
+          <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-300 mb-10">
             <span>✅ 500+ Happy Travelers</span>
             <span>✅ Best Price Guarantee</span>
             <span>✅ 24/7 Support</span>
@@ -99,6 +94,106 @@ export default function Home() {
         </div>
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-white text-2xl z-10">↓</div>
       </section>
+
+      {/* Wave divider */}
+      <div style={{ lineHeight: 0, background: '#0a0f1e' }}>
+        <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style={{ display: 'block', width: '100%' }}>
+          <path d="M0,40 C360,80 1080,0 1440,40 L1440,0 L0,0 Z" fill="#0a0f1e" />
+        </svg>
+      </div>
+
+      {/* Kasi Yatra Section */}
+      <section className="relative py-20" style={{ backgroundImage: `linear-gradient(rgba(10,5,30,0.72), rgba(10,5,30,0.72)), url('https://images.unsplash.com/photo-1561361058-c24cecae35ca?w=1400&q=80')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
+          <div className="flex-1 text-white">
+            <span className="text-xs bg-pink-500 text-white px-3 py-1 rounded-full font-bold mb-3 inline-block">MOST POPULAR</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-2">🕉️ Kasi Yatra</h2>
+            <p className="text-orange-300 mb-4">Varanasi → Prayagraj → Ayodhya · 6 Days / 5 Nights</p>
+            <ul className="text-gray-300 text-sm space-y-1 mb-6">
+              <li>✅ Kashi Vishwanath Temple darshan</li>
+              <li>✅ Ganga Aarti at Dashashwamedh Ghat</li>
+              <li>✅ Prayagraj Sangam & Triveni</li>
+              <li>✅ Ram Mandir, Ayodhya</li>
+            </ul>
+            <div className="flex items-center gap-4">
+              <span className="text-3xl font-extrabold text-green-400">₹35,999</span>
+              <button onClick={() => window.open(`https://wa.me/918838691200?text=${encodeURIComponent("I'm interested in Kasi Yatra (₹35,999). Please share details.")}`, '_blank')} className="bg-green-600 hover:bg-green-500 text-white px-6 py-3 rounded-2xl font-bold transition-all hover:scale-105">📲 Book Now</button>
+            </div>
+          </div>
+          <div className="flex-1">
+            <img src="https://images.unsplash.com/photo-1561361058-c24cecae35ca?w=600&q=80" alt="Kasi Yatra" className="rounded-2xl shadow-2xl w-full h-64 object-cover" />
+          </div>
+        </div>
+      </section>
+
+      {/* Wave divider */}
+      <div style={{ lineHeight: 0 }}>
+        <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style={{ display: 'block', width: '100%' }}>
+          <path d="M0,0 C360,80 1080,0 1440,80 L1440,80 L0,80 Z" fill="#1a0a2e" />
+        </svg>
+      </div>
+
+      {/* Chardham Yatra Section */}
+      <section className="relative py-20" style={{ backgroundImage: `linear-gradient(rgba(5,10,30,0.75), rgba(5,10,30,0.75)), url('https://images.unsplash.com/photo-1609766857041-ed402ea8069a?w=1400&q=80')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="max-w-5xl mx-auto px-4 flex flex-col md:flex-row-reverse items-center gap-10">
+          <div className="flex-1 text-white">
+            <span className="text-xs bg-teal-500 text-white px-3 py-1 rounded-full font-bold mb-3 inline-block">BEST VALUE</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-2">🕉️ Chardham Yatra</h2>
+            <p className="text-orange-300 mb-4">Yamunotri → Gangotri → Kedarnath → Badrinath · 12 Days / 11 Nights</p>
+            <ul className="text-gray-300 text-sm space-y-1 mb-6">
+              <li>✅ Kedarnath Temple — Shiva's abode</li>
+              <li>✅ Badrinath Dham darshan</li>
+              <li>✅ Gangotri — source of Ganga</li>
+              <li>✅ Yamunotri — source of Yamuna</li>
+            </ul>
+            <div className="flex items-center gap-4">
+              <span className="text-3xl font-extrabold text-green-400">₹79,999</span>
+              <button onClick={() => window.open(`https://wa.me/918838691200?text=${encodeURIComponent("I'm interested in Chardham Yatra (₹79,999). Please share details.")}`, '_blank')} className="bg-green-600 hover:bg-green-500 text-white px-6 py-3 rounded-2xl font-bold transition-all hover:scale-105">📲 Book Now</button>
+            </div>
+          </div>
+          <div className="flex-1">
+            <img src="https://images.unsplash.com/photo-1609766857041-ed402ea8069a?w=600&q=80" alt="Chardham Yatra" className="rounded-2xl shadow-2xl w-full h-64 object-cover" />
+          </div>
+        </div>
+      </section>
+
+      {/* Wave divider */}
+      <div style={{ lineHeight: 0 }}>
+        <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style={{ display: 'block', width: '100%' }}>
+          <path d="M0,80 C360,0 1080,80 1440,0 L1440,80 L0,80 Z" fill="#0f0a1e" />
+        </svg>
+      </div>
+
+      {/* Nepal Tour Section */}
+      <section className="relative py-20" style={{ backgroundImage: `linear-gradient(rgba(5,15,10,0.75), rgba(5,15,10,0.75)), url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1400&q=80')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
+          <div className="flex-1 text-white">
+            <span className="text-xs bg-teal-600 text-white px-3 py-1 rounded-full font-bold mb-3 inline-block">RECOMMENDED</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-2">🌄 Nepal Tour</h2>
+            <p className="text-orange-300 mb-4">Kathmandu → Pokhara → Pashupatinath · 7 Days / 6 Nights</p>
+            <ul className="text-gray-300 text-sm space-y-1 mb-6">
+              <li>✅ Pashupatinath Temple darshan</li>
+              <li>✅ Boudhanath Stupa</li>
+              <li>✅ Pokhara Lake & Himalayan views</li>
+              <li>✅ Everest viewpoint</li>
+            </ul>
+            <div className="flex items-center gap-4">
+              <span className="text-3xl font-extrabold text-green-400">₹57,999</span>
+              <button onClick={() => window.open(`https://wa.me/918838691200?text=${encodeURIComponent("I'm interested in Nepal Tour (₹57,999). Please share details.")}`, '_blank')} className="bg-green-600 hover:bg-green-500 text-white px-6 py-3 rounded-2xl font-bold transition-all hover:scale-105">📲 Book Now</button>
+            </div>
+          </div>
+          <div className="flex-1">
+            <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=600&q=80" alt="Nepal Tour" className="rounded-2xl shadow-2xl w-full h-64 object-cover" />
+          </div>
+        </div>
+      </section>
+
+      {/* Wave divider into categories */}
+      <div style={{ lineHeight: 0 }}>
+        <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style={{ display: 'block', width: '100%' }}>
+          <path d="M0,0 C480,80 960,0 1440,80 L1440,80 L0,80 Z" fill="#0a0f1e" />
+        </svg>
+      </div>
 
       {/* Categories — Shiva bg with wings pattern */}
       <section
@@ -131,84 +226,6 @@ export default function Home() {
                   </div>
                 </div>
               </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Packages — Kasi, Chardham, Nepal */}
-      <section
-        className="py-16"
-        style={{
-          backgroundImage: `linear-gradient(rgba(10,5,30,0.85), rgba(10,5,30,0.85)), url('https://images.unsplash.com/photo-1609766857041-ed402ea8069a?w=1400&q=80')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-10">
-            <p className="text-orange-400 font-semibold text-sm uppercase tracking-widest">🕉️ Top Picks</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mt-1">Most Popular Packages</h2>
-            <p className="text-gray-400 mt-2 text-sm">Sacred journeys handpicked for you</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                name: 'Kasi Yatra',
-                subtitle: 'Varanasi → Prayagraj → Ayodhya',
-                price: '₹35,999',
-                perPerson: '₹35,999/person',
-                days: '6 Days / 5 Nights',
-                badge: 'MOST POPULAR',
-                badgeColor: 'bg-pink-500',
-                img: 'https://images.unsplash.com/photo-1561361058-c24cecae35ca?w=600&q=80',
-                desc: 'Spiritual journey to Kashi Vishwanath, Ganga Aarti, Prayagraj Sangam and Ram Mandir.',
-              },
-              {
-                name: 'Chardham Yatra',
-                subtitle: 'Yamunotri → Gangotri → Kedarnath → Badrinath',
-                price: '₹79,999',
-                perPerson: '₹79,999/person',
-                days: '12 Days / 11 Nights',
-                badge: 'BEST VALUE',
-                badgeColor: 'bg-teal-500',
-                img: 'https://images.unsplash.com/photo-1609766857041-ed402ea8069a?w=600&q=80',
-                desc: 'Complete Chardham pilgrimage covering all four sacred dhams in the Himalayas.',
-              },
-              {
-                name: 'Nepal Tour',
-                subtitle: 'Kathmandu → Pokhara → Pashupatinath',
-                price: '₹57,999',
-                perPerson: '₹57,999/person',
-                days: '7 Days / 6 Nights',
-                badge: 'RECOMMENDED',
-                badgeColor: 'bg-teal-600',
-                img: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=600&q=80',
-                desc: 'Himalayan adventure with Pashupatinath temple, Boudhanath Stupa and Pokhara lake views.',
-              },
-            ].map(pkg => (
-              <div key={pkg.name} className="rounded-2xl overflow-hidden shadow-2xl bg-white">
-                <div className="relative">
-                  <img src={pkg.img} alt={pkg.name} className="w-full h-48 object-cover" />
-                  <div className="absolute top-3 left-3">
-                    <span className={`text-xs ${pkg.badgeColor} text-white px-3 py-1 rounded-full font-bold tracking-wide`}>{pkg.badge}</span>
-                  </div>
-                  <div className="absolute top-3 right-3">
-                    <span className="text-xs bg-green-600 text-white px-3 py-1 rounded-full font-bold">{pkg.perPerson}</span>
-                  </div>
-                </div>
-                <div className="p-5">
-                  <h3 className="text-gray-900 font-bold text-lg leading-tight">{pkg.name}</h3>
-                  <p className="text-gray-500 text-xs mt-1 flex items-center gap-1">⏱ {pkg.days}</p>
-                  <p className="text-gray-600 text-sm mt-2 mb-4">{pkg.desc}</p>
-                  <button
-                    onClick={() => window.open(`https://wa.me/918838691200?text=${encodeURIComponent(`I'm interested in ${pkg.name} (${pkg.price}). Please share details.`)}`, '_blank')}
-                    className="w-full bg-green-600 hover:bg-green-500 text-white py-2.5 rounded-xl text-sm font-bold transition-colors"
-                  >
-                    📲 Enquire Now
-                  </button>
-                </div>
-              </div>
             ))}
           </div>
         </div>

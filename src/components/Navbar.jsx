@@ -4,6 +4,7 @@ import TempleMarquee from './TempleMarquee'
 
 const links = [
   { to: '/temple', label: '🛕 Temple Tours' },
+  { to: '/kerala', label: '🌴 View Packages' },
   { to: '/', label: 'Home' },
   { to: '/kerala', label: 'Kerala' },
   { to: '/goa', label: 'Goa' },
