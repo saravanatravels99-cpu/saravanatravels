@@ -47,7 +47,7 @@ export default function Home() {
           <div className="absolute inset-0" style={{ background: 'rgba(0,0,30,0.25)' }}></div>
         </div>
         <div className="text-center text-white px-4 max-w-5xl mx-auto relative z-10 pt-24 md:pt-0">
-          <p className="text-orange-300 font-medium mb-2 tracking-widest text-sm uppercase">🕉️ Welcome to Saravana Travels</p>
+          <p className="text-orange-300 font-medium mb-2 tracking-widest text-xl md:text-2xl uppercase">🕉️ Welcome to Saravana Travels</p>
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
             Explore the <span className="text-orange-400">Divine Serenity</span>
           </h1>
@@ -235,7 +235,7 @@ export default function Home() {
               { id: 'kasi', name: 'Kasi Yatra', sub: 'Varanasi · Prayagraj · Ayodhya', price: '₹35,999', days: '6 Days', badge: 'MOST POPULAR', color: '#ec4899', img: 'https://images.unsplash.com/photo-1561361058-c24cecae35ca?w=344&h=256&fit=crop&q=80' },
               { id: 'chardham', name: 'Chardham Yatra', sub: 'Yamunotri · Gangotri · Kedarnath · Badrinath', price: '₹79,999', days: '12 Days', badge: 'BEST VALUE', color: '#14b8a6', img: 'https://images.unsplash.com/photo-1609766857041-ed402ea8069a?w=600&q=80' },
               { id: 'nepal', name: 'Nepal Tour', sub: 'Kathmandu · Pokhara · Pashupatinath', price: '₹57,999', days: '7 Days', badge: 'RECOMMENDED', color: '#0d9488', img: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=600&q=80' },
-              { id: 'tirupati', name: 'Tirupati Darshan', sub: 'Tirupati · Tirumala', price: '₹12,999', days: '3 Days', badge: 'DEVOTION', color: '#f59e0b', img: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=600&q=80' },
+              { id: 'tirupati', name: 'Tirupati Darshan', sub: 'Tirupati · Tirumala', price: '₹12,999', days: '3 Days', badge: 'DEVOTION', color: '#f59e0b', img: 'https://images.unsplash.com/photo-1609766418204-94aae0ecfdfc?w=344&h=256&fit=crop&q=80' },
               { id: 'rameswaram', name: 'Rameswaram & Madurai', sub: 'Rameswaram · Madurai · Kanyakumari', price: '₹14,999', days: '4 Days', badge: 'SOUTH INDIA', color: '#7c3aed', img: 'https://images.unsplash.com/photo-1519451241324-20b4ea2c4220?w=600&q=80' },
               { id: 'andaman', name: 'Andaman Islands', sub: 'Port Blair · Havelock · Neil Island', price: '₹45,000', days: '6 Days', badge: 'BEACH PARADISE', color: '#0891b2', img: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80' },
               { id: 'golden_triangle', name: 'Golden Triangle', sub: 'Delhi · Agra · Jaipur', price: '₹33,000', days: '6 Days', badge: 'HERITAGE', color: '#d97706', img: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?w=600&q=80' },
