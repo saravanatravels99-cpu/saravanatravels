@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { waBooking } from '../utils/whatsapp'
+import useSEO from '../utils/useSEO'
 
 const goaPlaces = {
   north: ['Calangute Beach', 'Baga Beach', 'Fort Aguada', 'Anjuna Flea Market', 'Chapora Fort', 'Vagator Beach'],
@@ -17,6 +18,7 @@ export default function GoaPackages() {
   const navigate = useNavigate()
   const [selected, setSelected] = useState(null)
   const [members, setMembers] = useState(2)
+  useSEO({ title: 'Goa Tour Packages', description: 'Goa friends and group tour packages from Coimbatore. North Goa, South Goa, beaches, water sports and more.', keywords: 'goa tour packages coimbatore, goa friends package, goa group tour, north goa south goa, goa beach holiday', url: 'https://saravanatravels.in/goa' })
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   const pkg = packages.find(p => p.days === selected)

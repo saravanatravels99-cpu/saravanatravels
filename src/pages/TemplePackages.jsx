@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { waBooking } from '../utils/whatsapp'
+import useSEO from '../utils/useSEO'
 
 const DETAIL_IDS = { 'Kasi Yatra': 'kasi', 'Chardham Yatra': 'chardham', 'Kailash Mansarovar': 'kailash', 'Tirupati Darshan': 'tirupati', 'Rameswaram & Madurai': 'rameswaram' }
 
@@ -120,6 +121,7 @@ export default function TemplePackages() {
   const [tab, setTab] = useState(location.state?.tab || 'india')
   const [width, setWidth] = useState(window.innerWidth)
 
+  useSEO({ title: 'Temple Tour Packages', description: 'Book sacred temple tour packages from Coimbatore — Kasi Yatra, Chardham, Tirupati, Rameswaram, Kailash Mansarovar and Kerala temple tours.', keywords: 'temple tour packages coimbatore, kasi yatra, chardham yatra, tirupati darshan, rameswaram tour, kailash mansarovar, kerala temple tour', url: 'https://saravanatravels.in/temples' })
   useEffect(() => { window.scrollTo(0, 0) }, [])
   useEffect(() => {
     const handler = () => setWidth(window.innerWidth)

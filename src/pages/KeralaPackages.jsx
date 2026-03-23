@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import PricingCalculator from '../components/PricingCalculator'
 import { waBooking } from '../utils/whatsapp'
+import useSEO from '../utils/useSEO'
 
 const heroContent = {
   group:    { title: 'Kerala Group Packages',    sub: "God's Own Country awaits you",         bg: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=80' },
@@ -136,6 +137,7 @@ export default function KeralaPackages() {
   const location = useLocation()
   const navigate = useNavigate()
   const [activeTab, setActiveTab] = useState(location.state?.tab || 'group')
+  useSEO({ title: 'Kerala Tour Packages', description: 'Kerala group, honeymoon, family and temple tour packages from Coimbatore. Backwaters, hill stations, beaches and more.', keywords: 'kerala tour packages coimbatore, kerala honeymoon package, kerala family tour, kerala group tour, guruvayur temple tour', url: 'https://saravanatravels.in/kerala' })
   useEffect(() => { window.scrollTo(0, 0) }, [])
   const tabs = [
     { id: 'group', label: '👥 Group Packages' },

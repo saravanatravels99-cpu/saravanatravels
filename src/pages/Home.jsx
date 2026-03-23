@@ -1,6 +1,7 @@
 ﻿import { Link, useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { waBooking } from '../utils/whatsapp'
+import useSEO from '../utils/useSEO'
 
 const SHIVA_OVERLAY = `linear-gradient(rgba(10,5,30,0.88), rgba(10,5,30,0.88)), url('https://images.unsplash.com/photo-1609766857041-ed402ea8069a?w=1400&q=80')`
 const WINGS_PATTERN = `url("data:image/svg+xml,%3Csvg width='120' height='60' viewBox='0 0 120 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M60 30 L5 8 L22 30 L5 52 Z' fill='rgba(13,71,161,0.18)'/%3E%3Cpath d='M60 30 L115 8 L98 30 L115 52 Z' fill='rgba(13,71,161,0.18)'/%3E%3Ccircle cx='60' cy='30' r='3' fill='rgba(13,71,161,0.12)'/%3E%3C/svg%3E")`
@@ -19,6 +20,12 @@ const CHARDHAM_BG = '/chardam.png'
 
 export default function Home() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
+  useSEO({
+    title: 'Best Travel Agency in Coimbatore - Temple Tours, Kerala, Goa, Nepal Packages',
+    description: 'Saravana Travels Coimbatore - Book Kasi Yatra, Chardham Yatra, Tirupati Darshan, Kerala, Goa, Nepal, Andaman tour packages. Best price guaranteed. Call +91 9442855620.',
+    keywords: 'Saravana Travels Coimbatore, travel agency Coimbatore, Kasi Yatra, Chardham Yatra, Tirupati darshan, Kerala tour, Goa tour, Nepal tour, temple tour Tamil Nadu, pilgrimage packages Coimbatore',
+    url: 'https://saravanatravels.vercel.app/'
+  })
   const navigate = useNavigate()
   const goToDetail = (pkg) => navigate(`/package/${pkg.id}`, { state: pkg })
   return (

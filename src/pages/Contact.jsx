@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { waBooking } from '../utils/whatsapp'
+import useSEO from '../utils/useSEO'
 
 const packages = [
   'Kerala - Group Package',
@@ -20,6 +21,7 @@ const packages = [
 export default function Contact() {
   const [form, setForm] = useState({ name: '', phone: '', package: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
+  useSEO({ title: 'Contact Us', description: 'Contact Saravana Travels Coimbatore for tour bookings, enquiries and custom packages. Call, WhatsApp or email us.', keywords: 'contact saravana travels, tour booking coimbatore, travel agent coimbatore, whatsapp tour booking', url: 'https://saravanatravels.in/contact' })
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   const handleChange = e => setForm({ ...form, [e.target.name]: e.target.value })

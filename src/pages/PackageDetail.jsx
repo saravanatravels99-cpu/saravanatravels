@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom"
 import { useState, useEffect } from "react"
+import useSEO from "../utils/useSEO"
 
 const PACKAGE_DATA = {
   kasi: { name: "Kasi Yatra", subtitle: "Varanasi - Prayagraj - Ayodhya", price: "35,999", rawPrice: 35999, days: "6 Days / 5 Nights", badge: "MOST POPULAR", badgeColor: "#ec4899", img: "https://images.unsplash.com/photo-1561361058-c24cecae35ca?w=600&q=80", about: "Varanasi is one of the world oldest living cities and the spiritual capital of India.", experience: [{ icon: "sun", title: "Ganga Aarti", desc: "Witness the Ganga Aarti at Dashashwamedh Ghat" },{ icon: "temple", title: "Kashi Vishwanath", desc: "Seek blessings at Kashi Vishwanath" },{ icon: "boat", title: "Ganga Boat Ride", desc: "Early morning boat ride on the Ganga" },{ icon: "pray", title: "Triveni Sangam", desc: "Holy dip at Prayagraj Sangam" },{ icon: "temple2", title: "Ram Mandir", desc: "Visit the newly built Ram Mandir in Ayodhya" },{ icon: "wheel", title: "Sarnath", desc: "Explore Sarnath" }], gallery: ["https://images.unsplash.com/photo-1561361058-c24cecae35ca?w=600&q=80","https://images.unsplash.com/photo-1561361058-c24cecae35ca?w=600&q=80","https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=600&q=80","/chardam.png","https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80","https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=600&q=80"], inclusions: ["5 nights accommodation","Daily breakfast & dinner","AC vehicle","Expert guide","Temple entry arrangements","Boat ride on Ganga","Flight tickets / Train tickets"], exclusions: ["Auto charge","VIP Darshan","Personal expenses"], itinerary: [{ day: "Day 1", title: "Arrival in Varanasi", desc: "Arrive at Varanasi. Check-in. Evening Ganga Aarti." },{ day: "Day 2", title: "Kashi Vishwanath & Ghats", desc: "Boat ride on Ganga. Visit Kashi Vishwanath Temple." },{ day: "Day 3", title: "Sarnath", desc: "Visit Sarnath - Dhamek Stupa, Sarnath Museum." },{ day: "Day 4", title: "Prayagraj", desc: "Drive to Prayagraj. Visit Triveni Sangam." },{ day: "Day 5", title: "Ayodhya", desc: "Drive to Ayodhya. Visit Ram Mandir." },{ day: "Day 6", title: "Departure", desc: "Transfer to airport/station." }] },
@@ -22,6 +23,7 @@ export default function PackageDetail() {
   const [members, setMembers] = useState(2)
   const [openDay, setOpenDay] = useState(null)
   const [lightbox, setLightbox] = useState(null)
+  useSEO(pkg ? { title: pkg.name, description: pkg.about, keywords: `${pkg.name.toLowerCase()} tour package, ${pkg.subtitle.toLowerCase()}, saravana travels coimbatore`, url: `https://saravanatravels.in/package/${id}` } : {})
   useEffect(() => { window.scrollTo(0, 0) }, [id])
   if (!pkg) return (
     <div style={{ background: "#0a0f1e", minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", color: "white" }}>

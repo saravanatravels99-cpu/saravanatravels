@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { waBooking } from '../utils/whatsapp'
+import useSEO from '../utils/useSEO'
 
 const DETAIL_IDS = { 'Golden Triangle': 'golden_triangle', 'Chardham Yatra': 'chardham', 'Kasi Yatra': 'kasi', 'Andaman': 'andaman', 'Nepal': 'nepal', 'Kailash Mansarovar': 'kailash' }
 
@@ -71,6 +72,7 @@ const badgeColors = {
 }
 
 export default function InternationalPackages() {
+  useSEO({ title: 'International & Other Tour Packages', description: 'International and outstation tour packages from Coimbatore — Nepal, Kailash Mansarovar, Andaman, Golden Triangle, Chardham and more.', keywords: 'international tour packages coimbatore, nepal tour, kailash mansarovar, andaman tour, golden triangle tour, chardham yatra coimbatore', url: 'https://saravanatravels.in/international' })
   useEffect(() => { window.scrollTo(0, 0) }, [])
   const navigate = useNavigate()
   return (
