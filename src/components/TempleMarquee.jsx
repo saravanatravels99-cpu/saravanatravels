@@ -54,7 +54,7 @@ export default function TempleMarquee() {
             key={i}
             onClick={() => item.to && handleClick(item)}
             style={{
-              color: '#fef3c7',
+              color: '#ffffff',
               fontWeight: 600,
               fontSize: '0.82rem',
               padding: '0 32px 0 0',
