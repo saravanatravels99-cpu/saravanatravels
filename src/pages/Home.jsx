@@ -142,6 +142,36 @@ export default function Home() {
         </svg>
       </div>
 
+      {/* Kailash Mansarovar Section */}
+      <section className="relative py-20" style={{ backgroundImage: `linear-gradient(rgba(10,5,30,0.78), rgba(10,5,30,0.78)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1400&q=80')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="max-w-5xl mx-auto px-4 flex flex-col md:flex-row-reverse items-center gap-10">
+          <div className="flex-1 text-white">
+            <span className="text-xs bg-purple-600 text-white px-3 py-1 rounded-full font-bold mb-3 inline-block">PREMIUM</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-2">🕉️ Kailash Mansarovar</h2>
+            <p className="text-orange-300 mb-4">Sacred Himalayan Pilgrimage · 15+ Days</p>
+            <ul className="text-gray-300 text-sm space-y-1 mb-6">
+              <li>✅ Mt. Kailash — Shiva's sacred abode</li>
+              <li>✅ Mansarovar Lake holy dip</li>
+              <li>✅ Parikrama of Kailash</li>
+              <li>✅ Gauri Kund darshan</li>
+            </ul>
+            <div className="flex items-center gap-4">
+              <span className="text-3xl font-extrabold text-green-400">₹2,75,000</span>
+              <button onClick={() => goToDetail({ id: 'kailash', name: 'Kailash Mansarovar', price: '₹2,75,000', rawPrice: '275000', days: '15+ Days', img: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80', badge: 'PREMIUM', badgeColor: '#7c3aed', desc: 'The most sacred pilgrimage — journey to the abode of Lord Shiva at Mt. Kailash.', highlights: ['Mt. Kailash Parikrama', 'Mansarovar Lake holy dip', 'Gauri Kund darshan', 'Astapada & Dirapuk', 'Dolma La Pass crossing', 'Helicopter option available'], itinerary: ['Arrival Kathmandu', 'Fly to Lhasa', 'Acclimatization at Lhasa', 'Drive to Saga', 'Drive to Mansarovar', 'Mansarovar holy dip & puja', 'Drive to Darchen', 'Kailash Parikrama Day 1', 'Kailash Parikrama Day 2 — Dolma La Pass', 'Kailash Parikrama Day 3', 'Return to Kathmandu', 'Departure'] })} className="bg-green-600 hover:bg-green-500 text-white px-6 py-3 rounded-2xl font-bold transition-all hover:scale-105">📋 View Details</button>
+            </div>
+          </div>
+          <div className="flex-1">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Kailash Mansarovar" className="rounded-2xl shadow-2xl w-full h-64 object-cover" />
+          </div>
+        </div>
+      </section>
+
+      <div style={{ lineHeight: 0 }}>
+        <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style={{ display: 'block', width: '100%' }}>
+          <path d="M0,0 C360,80 1080,0 1440,80 L1440,80 L0,80 Z" fill="#0a1a0a" />
+        </svg>
+      </div>
+
       {/* Nepal Tour Section */}
       <section className="relative py-20" style={{ backgroundImage: `linear-gradient(rgba(5,15,10,0.75), rgba(5,15,10,0.75)), url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1400&q=80')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
